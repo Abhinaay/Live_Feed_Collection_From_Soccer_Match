@@ -1,0 +1,115 @@
+/* Set height of body and the document to 100% to enable "full page tabs" */
+
+
+/* Style tab links */
+.tablink {
+  background-color: limegreen;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: mediumblue;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#live-matches {background-color: #f1f1f1;}
+#results {background-color: #f1f1f1;}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
+  padding: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.vs {
+  text-align: center;
+  margin: 0;
+  top: 85%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.match-card {
+
+}
+
+.team1-side {
+
+  text-align: center;
+}
+
+.team2-side {
+
+  text-align: center;
+}
+
+.league-name {
+  text-align: right;
+}
+
+.match-status {
+  text-align: left;
+}
+
+.match-date {
+  text-align: right;
+}
+
+.match-time {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.result-phone {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .result-phone {
+    display: block;
+  }
+
+  .live-match-card h3{
+    font-size: 26px;
+  }
+
+  .result-page {
+    display: none;
+  }
+
+
+}

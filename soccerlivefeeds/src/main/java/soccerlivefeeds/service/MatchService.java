@@ -1,5 +1,6 @@
 package soccerlivefeeds.service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +22,7 @@ public class MatchService {
 		
 		List<Matches> matches = matchRepository.findAll();
 		
-		
+		Collections.reverse(matches);
 		return matches.stream().map(this::mapFromMatchToDto).collect(Collectors.toList());
 	}
 	

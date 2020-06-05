@@ -1,0 +1,83 @@
+<div style="background: #f1f1f1">
+  <div>
+<button class="tablink" (click)="openPage1('live-matches')">Live Matches</button>
+<button class="tablink" (click)="openPage1('results')" id="defaultOpen">Results</button>
+  </div>
+
+  <div id="phone-result" style="background: #f1f1f1;">
+    <div class="card result-phone">
+      <div class="row">
+        <div class="col-md-12 center" style="color: darkred">
+          <h3>Open the site in</h3>
+          <h3>Desktop mode!!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="live-matches" class="tabcontent">
+  <div class="card">
+    <div class="row live-match-card">
+      <div class="col-md-12 center">
+        <h3>Due to the spread of <span style="color: #fff; background: red; border-radius: 10px"> COVID-19 </span>,</h3>
+        <h3><span  style="color: #fff; background: blue; border-radius: 10px"> No Live Matches </span>  are being played!!!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="results" class="tabcontent">
+  <div class="row" *ngFor="let match of matches | async">
+    <div class="card result-page">
+
+      <div class="row match-card">
+        <div class="col-md-5 team1-side">
+          <p><img src="{{match.homeTeamBadge}}"></p>
+          <p>{{match.homeTeamName}}</p>
+        </div>
+        <div class="col-md-2 vs"><h3>VS</h3></div>
+        <div class="col-md-5 team2-side">
+          <p><img src="{{match.awayTeamBadge}}"></p>
+          <p>{{match.awayTeamName}}</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-5  hometeam-score center">
+          <h2><span style="color: darkslategrey">{{match.homeTeamScore}}</span></h2>
+        </div>
+        <div class="col-md-2 center">
+          <h3>:</h3>
+        </div>
+        <div class="col-md-5 awayteam-score center">
+          <h2><span style="color: darkslategrey">{{match.awayTeamScore}}</span></h2>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6  league-name">
+          <h6><span style="color: green">League: </span><span style="color: darkblue">{{match.leagueName}}</span></h6>
+        </div>
+        <div class="col-md-6 match-status">
+          <h6><span style="color: green">Match Status: </span><span style="color: darkblue">{{match.matchStatus}}</span></h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6  match-date">
+          <h6><span style="color: green">Date: </span><span style="color: darkblue">{{match.matchDate}}</span></h6>
+        </div>
+        <div class="col-md-6 match-time">
+          <h6><span style="color: green">Time: </span><span style="color: darkblue">{{match.matchTime}}</span></h6>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+</div>
