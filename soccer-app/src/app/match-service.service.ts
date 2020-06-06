@@ -11,6 +11,6 @@ export class MatchServiceService {
   constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<Array<MatchPayload>>{
-    return this.httpClient.get<Array<MatchPayload>>('http://localhost:8080/api/all');
+    return this.httpClient.get<Array<MatchPayload>>('https://soccer-live-feeds-spring.herokuapp.com/api/all');
   }
 }

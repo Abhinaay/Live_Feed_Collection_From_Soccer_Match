@@ -36,7 +36,7 @@ public class MatchController {
 		deleteAll();
 		// addSampleData();
 		
-		String url="https://apiv2.apifootball.com/?action=get_events&from=2020-01-01&to=2020-02-17&league_id=148&APIkey=53d19ce2c5ce9e9ea24e647707cd3fcbe523b79d73022b861d0aadec85a59d30";
+		String url="https://apiv2.apifootball.com/?action=get_events&from=2020-03-1&to=2020-03-17&league_id=148&APIkey=53d19ce2c5ce9e9ea24e647707cd3fcbe523b79d73022b861d0aadec85a59d30";
 		RestTemplate restTemplate = new RestTemplate();
 		String resp = restTemplate.getForObject(url, String.class);
 
